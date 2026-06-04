@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+
+Sitemap: https://admeng.ir/sitemap.xml
