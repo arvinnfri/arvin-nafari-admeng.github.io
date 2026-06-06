@@ -126,6 +126,68 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Slide info panel (replaces hero-title + hero-subtitle + buttons) */
+.slide-panel {
+    display: inline-block;
+    /* glass effect: lighter, more transparent */
+    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    padding: 20px 28px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.36);
+    max-width: 760px;
+    text-align: center;
+    margin: 70px auto 0; /* pushed lower */
+}
+
+.slide-title {
+    font-size: 2.2rem;
+    color: var(--white);
+    margin: 0 0 10px 0;
+    letter-spacing: 0.4px;
+    font-weight: 800;
+    text-shadow: 2px 6px 18px rgba(0,0,0,0.6);
+}
+
+.slide-description {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.05rem;
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+@media (max-width: 992px) {
+    .slide-title {
+        font-size: 1.6rem;
+    }
+
+    .slide-panel {
+        padding: 16px 18px;
+        max-width: 90%;
+    }
+}
+
+/* Badges container to hold multiple badges centered */
+.hero-badges {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.hero-badge.revcon {
+    background: linear-gradient(135deg, rgba(255,107,53,1), rgba(255,160,120,0.95));
+    color: #fff;
+}
+
+.hero-badge svg {
+    vertical-align: middle;
+}
+
 /* Statistics */
 .hero-stats {
     display: none !important;
