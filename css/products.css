@@ -227,7 +227,7 @@
 }
 
 .product-title.product-title--small {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
 }
 
 .product-title a {
@@ -590,5 +590,13 @@
     .filter-btn {
         padding: 6px 12px;
         font-size: 0.7rem;
+    }
+}
+
+/* Ensure REVCON small titles match other titles on narrow screens */
+@media (max-width: 480px) {
+    .product-title.product-title--small {
+        font-size: 0.8rem !important;
+        font-weight: 600;
     }
 }

@@ -87,13 +87,14 @@
 .exclusive-images {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     direction: rtl;
     flex-wrap: nowrap;
 }
 
-.exclusive-images img {
+.exclusive-images img,
+.exclusive-brand-logos img {
     display: block;
     width: auto;
     height: auto;
@@ -106,31 +107,16 @@
 
 .exclusive-brand-logos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     flex-shrink: 0;
 }
 
 .exclusive-brand-logos img {
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 140px;
-    max-height: 80px;
     box-shadow: none;
     background: transparent;
-    object-fit: contain;
-}
-
-.exclusive-brand-logos img:first-child {
-    max-width: 140px;
-    max-height: 75px;
-}
-
-.exclusive-brand-logos img:last-child {
-    margin-top: 12px;
 }
 
 @media (max-width: 768px) {
@@ -154,7 +140,7 @@
     }
 
     .exclusive-brand-logos {
-        gap: 8px;
+        gap: 12px;
     }
 
     .exclusive-brand-logos img {
@@ -170,22 +156,39 @@
 
 @media (max-width: 480px) {
     .exclusive-images {
-        gap: 4px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        overflow-x: auto;
     }
 
-    .exclusive-images img {
-        max-width: 40px;
-        max-height: 40px;
-    }
-
+    .exclusive-images img,
     .exclusive-brand-logos img {
         max-width: 90px;
         max-height: 55px;
+        width: auto;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .exclusive-brand-logos {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
     }
 
     .exclusive-brand-logos img:first-child {
         max-width: 90px;
         max-height: 55px;
+    }
+
+    .exclusive-brand-logos img:last-child {
+        margin-top: 0;
     }
 }
 
@@ -242,6 +245,16 @@
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 480px) {
+    /* Hide the 'Quick Links' heading and links on small screens */
+    .footer-links-col > .footer-title {
+        display: none;
+    }
+    .footer-links {
+        display: none !important;
+    }
 }
 
 .footer-links li {

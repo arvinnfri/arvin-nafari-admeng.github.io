@@ -188,6 +188,14 @@
     vertical-align: middle;
 }
 
+@media (max-width: 480px) {
+    .hero-badges .hero-badge,
+    .hero-badge {
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+}
+
 /* Statistics */
 .hero-stats {
     display: none !important;

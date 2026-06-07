@@ -478,6 +478,21 @@
     }
 
 
+}
+
+@media (max-width: 480px) {
+    /* Force top-bar text smaller on very small screens */
+    .top-bar-item,
+    .top-bar-item span {
+        font-size: 0.72rem !important;
+        line-height: 1.1;
+    }
+
+    .top-bar-item svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+}
     .phone-number {
         padding: 8px 10px;
     }

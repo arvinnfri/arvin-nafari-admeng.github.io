@@ -645,6 +645,12 @@
     .service-btn {
         padding: 8px 16px;
         font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .service-btn span,
+    .service-btn svg {
+        white-space: nowrap;
     }
 
     .cta-title {
